@@ -1,11 +1,12 @@
-global.RSS_name1 = 10;
-global.RSS_name2 = 20;
-
 export const parseArgs = () => {
-  const val = Object.keys(global).filter(item => item.match(/RSS_/gi));
-    val.forEach(item => { 
-      console.log(`${item} = ${global[item]}`)
-})
+  console.log(process.argv)
+  const val =  process.argv.filter(el => {
+    return el.match(/--/gi)
+  });
+  val.forEach(el => {
+  const index = process.argv.indexOf(el)
+   console.log(`${process.argv[index]} is ${process.argv[index + 1]}`)
+  })
 };
 
 parseArgs()
