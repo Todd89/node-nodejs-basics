@@ -5,12 +5,12 @@ export const copy = async () => {
   let copy = [];
    fs.readdir(path, function(err, items) {
     if(err) {
-      console.log('FS operation failed')
+      throw new Error('FS operation failed')
     } else {
       if (!fs.existsSync(path_copy)){
         fs.mkdirSync(path_copy);
       } else {
-        console.log('FS operation failed')
+        throw new Error('FS operation failed')
         return
       }
       for (let i=0; i<items.length; i++) {
