@@ -1,3 +1,13 @@
+import fs from 'fs';
+const path = './files/wrongFilename.txt';
+const new_path = './files/properFilename.md'
+
 export const rename = async () => {
-    // Write your code here 
+  fs.promises.rename( path, new_path).catch((err)  => {
+    if(err) {
+      if (err.code === 'ENOENT') console.log('FS operation failed')
+    }
+  })
 };
+
+rename();
