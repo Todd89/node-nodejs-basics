@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "node ./src/cli/cli.js  --value1 1 --value2 2",
     "modules": "node --experimental-json-modules ./src/modules/cjsToEsm.mjs",
-    "hash": "node ./src/hash/calcHash.js"
+    "hash": "node ./src/hash/calcHash.js",
+    "zip-compress": "node ./src/zip/compress.js",
+    "zip-decompress": "node ./src/zip/decompress.js",
+    "wt": "node ./src/wt/main.js"
   },
   "repository": {
     "url": "git+https://github.com/AlreadyBored/node-nodejs-basics.git"
