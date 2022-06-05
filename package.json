@@ -11,7 +11,17 @@
     "zip-compress": "node ./src/zip/compress.js",
     "zip-decompress": "node ./src/zip/decompress.js",
     "wt": "node ./src/wt/main.js",
-    "cp": "node ./src/cp/cp.js"
+    "cp": "node ./src/cp/cp.js",
+    "fs_copy": "node ./src/fs/copy.js",
+    "fs_create": "node ./src/fs/create.js",
+    "fs_remove": "node ./src/fs/delete.js",
+    "fs_list": "node ./src/fs/list.js",
+    "fs_read": "node ./src/fs/read.js",
+    "fs_rename": "node ./src/fs/rename.js",
+    "streams_read": "node ./src/streams/read.js",
+    "streams_transform": "node ./src/streams/transform.js",
+    "streams_write": "node ./src/streams/write.js"
+
   },
   "repository": {
     "url": "git+https://github.com/AlreadyBored/node-nodejs-basics.git"

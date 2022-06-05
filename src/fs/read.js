@@ -1,5 +1,12 @@
 import fs from 'fs';
-const file = './files/fileToRead.txt';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const file = `${__dirname}/files/fileToRead.txt`;
 
 export const read = async () => {
     await fs.promises.readFile(file, 'utf8').then((res)=>{

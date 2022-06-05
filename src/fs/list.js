@@ -1,5 +1,12 @@
 import fs from 'fs';
-const dir = './files'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+const dir = `${__dirname}/files`
 export const list = async () => {
   let items_arr = [];
 

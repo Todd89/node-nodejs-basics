@@ -1,5 +1,12 @@
 import fs from 'fs';
-const path = './files/fileToRemove.txt'
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const path = `${__dirname}/files/fileToRemove.txt`;
 
 export const remove = async () => {
     await fs.promises.unlink(path).catch((err) => {
